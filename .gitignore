@@ -1,2 +1,4 @@
 .DS_Store
-lib
+bower_components
+node_modules
+css/styles.css
