@@ -9,7 +9,8 @@ App.factory("PetFactory", function ($q, $http) {
       .success(
         randomPet => {
           console.log("from petfinder", randomPet);
-          resolve(randomPet.petfinder.pet)},
+          resolve(randomPet.petfinder.pet)
+        },
         error => reject(error)
       )
   });

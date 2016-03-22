@@ -1,6 +1,9 @@
 <div ng-controller="PetDisplayCtrl" class="pet-list">
 
   <h1>Random Dog Images</h1>
-  {{ petOfTheDay.name.$t }}
+
+  <div ng-repeat="pet in petCollection">
+    {{ pet.name.$t }}
+  </div>
 
 </div>

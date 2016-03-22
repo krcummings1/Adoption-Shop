@@ -10,8 +10,30 @@ App.controller('PetDisplayCtrl',
       $scope.petOfTheDay = null;
 
       PetFactory().then(
-        (randomPet) => $scope.petOfTheDay = randomPet,
-        () => false
+        function (randomPet) {
+          $scope.petCollection.push(randomPet);
+          return PetFactory();
+        },
+        function (error) {
+
+        }
+      ).then(
+        function (randomPet) {
+          $scope.petCollection.push(randomPet);
+          return PetFactory();
+        },
+        function () {}
+      ).then(
+        function (randomPet) {
+          $scope.petCollection.push(randomPet);          
+          return PetFactory();
+        },
+        function () {}
+      ).then(
+        function (randomPet) {
+          $scope.petCollection.push(randomPet);          
+        },
+        function () {}
       );
     }
 
