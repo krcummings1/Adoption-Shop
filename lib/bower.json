@@ -16,6 +16,11 @@
     "jquery": "^2.2.1",
     "angular": "^1.5.0",
     "bootstrap": "^3.3.6",
-    "angular-route": "^1.5.0"
+    "angular-route": "^1.5.0",
+    "angular-ui-router": "^0.2.18"
+  },
+  "devDependencies": {
+    "angularfire": "^1.1.4",
+    "firebase": "^2.4.1"
   }
 }

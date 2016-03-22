@@ -2,24 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Capstone</title>
+  <title>Adoption Shop</title>
 
   <link rel="stylesheet" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+  <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
+  <div ng-app="AdoptionShop">
 
+    <nav ng-include="'partials/header.html'"></nav>
+      
+    <div ng-view></div>
 
-
-
-
-
-
-
-
-
+  </div>
 
   <!-- jQuery library -->
   <script src="lib/bower_components/jquery/dist/jquery.min.js"></script>
@@ -29,11 +25,16 @@
   <script src="lib/bower_components/angular/angular.min.js"></script>
   <!-- Angular-Route library -->
   <script src="lib/bower_components/angular-route/angular-route.min.js"></script>
+  <script src="lib/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="lib/bower_components/angularfire/dist/angularfire.min.js"></script>
+  <script src="lib/bower_components/firebase/firebase.js"></script>
 
   <!-- my JS files -->
-  <script src="app/main.js"></script>
-  <script src="app/controllers/*.js"></script>
-  <script src="app/config/*.js"></script>
+  <script src="app/app.js"></script>
+  <script src="app/factories/PetFactory.js"></script>
+  <script src="app/controllers/HeaderCtrl.js"></script>
+  <script src="app/controllers/PetDisplayCtrl.js"></script>
+  <!-- <script src="app/factories/FirebaseFactory.js"></script> -->
 
 </body>
 </html>

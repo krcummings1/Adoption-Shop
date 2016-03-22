@@ -4,7 +4,7 @@
       "Atlas": {
         "name": "Atlas",
         "breed": "German Shepherd",
-        "age": 4,
+        "age": 2,
         "gender": "male",
         "pet_friendly": true,
         "kid_friendly": true
@@ -20,7 +20,7 @@
       "Goldie": {
         "name": "Goldie",
         "breed": "Golden Retriever",
-        "age": 4,
+        "age": 1,
         "gender": "female",
         "pet_friendly": true,
         "kid_friendly": true
@@ -36,7 +36,7 @@
       "Stella": {
         "name": "Stella",
         "breed": "German Shepherd",
-        "age": 4,
+        "age": 3,
         "gender": "female",
         "pet_friendly": true,
         "kid_friendly": true
@@ -77,7 +77,7 @@
       },
       "VHS": {
         "name": "Vanderburgh Humane Society",
-        "address": "8001 Broad Street",
+        "address": "8001 Main Street",
         "city": "Evansville",
         "state": "Indiana",
         "zip": "47712",

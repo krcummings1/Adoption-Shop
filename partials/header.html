@@ -1,0 +1,23 @@
+<img src="app/images/3dogscropped.jpg" class="header-photo" alt="">
+
+<div ng-controller="HeaderCtrl">
+  <nav>
+    <ul class="nav nav-tabs">
+      <li role="presentation" ng-class="{active: tab=='a'}"> 
+        <a href="#" ng-click="tab = 'a'">Pet Search</a>
+      </li>
+      <li role="presentation" ng-class="{active: tab=='b'}"> 
+        <a href="#" ng-click="tab = 'b'">Shelter Search</a>
+      </li>
+    </ul>
+  </nav>
+
+
+  <div ng-if="tab==='a'">
+    <div ng-include="'partials/pet-search.html'"></div>
+  </div>
+
+  <div ng-if="tab==='b'">
+    <div ng-include="'partials/shelter-search.html'"></div>
+  </div>
+</div>
