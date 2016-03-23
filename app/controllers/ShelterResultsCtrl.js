@@ -1,32 +1,12 @@
 "use strict";
 
-App.controller('ShelterCtrl', 
+App.controller('ShelterResultsCtrl', 
   [
     "$scope",
-    "$location",
     "ShelterFactory",
 
-    function ($scope, $location, ShelterFactory) {
-      $scope.shelterCollection = [];
-      $scope.shelter = {
-        zip: ""
-      }
-
-       
-      
-      $scope.searchShelters = function () {
-        ShelterFactory.findShelters($scope.shelter.zip)
-        .then(
-          function () { 
-            $location.path("/shelters")
-          },
-          function (err) {
-            console.log(err);
-          }
-        );
-
-
-      } // closing $scope.searchShelters function
+    function ($scope, ShelterFactory) {
+      $scope.shelterArray = ShelterFactory.getShelters()
     }
 ]);
 

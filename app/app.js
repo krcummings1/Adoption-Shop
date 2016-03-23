@@ -25,10 +25,10 @@ App.config(["$routeProvider",
         templateUrl: "partials/pet-display.html",
         controller: "PetDisplayCtrl",
       }).
-      // when("/shelters", {
-      //   templateUrl: "partials/shelter-search.html",
-      //   controller: "ShelterCtrl",
-      // }).
+      when("/shelters", {
+        templateUrl: "partials/shelter-results.html",
+        controller: "ShelterResultsCtrl",
+      }).
 //       // when("/shelters", {
 //       //   templateUrl: "partials/shelter-search.html",
 //       //   controller: "LoginCtrl"
