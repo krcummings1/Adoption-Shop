@@ -24,11 +24,11 @@ App.config(["$routeProvider",
       when("/", {
         templateUrl: "partials/pet-display.html",
         controller: "PetDisplayCtrl",
+      }).
+      // when("/shelters", {
+      //   templateUrl: "partials/shelter-search.html",
+      //   controller: "ShelterCtrl",
       // }).
-      // when("/pets", {
-      //   templateUrl: "partials/pet-display.html",
-      //   controller: "PetDisplayCtrl",
-//       // }).
 //       // when("/shelters", {
 //       //   templateUrl: "partials/shelter-search.html",
 //       //   controller: "LoginCtrl"
@@ -46,7 +46,7 @@ App.config(["$routeProvider",
 //       //   templateUrl: "partials/song-brief.html",
 //       //   controller: "SongDetailCtrl",
 //       //   resolve: { isAuth }
-      }). 
+      // }). 
       otherwise({
         redirectTo: "/"
       });

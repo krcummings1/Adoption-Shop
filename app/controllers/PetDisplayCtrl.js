@@ -9,6 +9,9 @@ App.controller('PetDisplayCtrl',
       $scope.petCollection = [];
       $scope.petOfTheDay = null;
 
+
+      // console.log(PetFactory);
+
       PetFactory().then(
         function (randomPet) {
           $scope.petCollection.push(randomPet);
