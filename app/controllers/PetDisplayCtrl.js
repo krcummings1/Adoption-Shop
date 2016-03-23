@@ -7,8 +7,6 @@ App.controller('PetDisplayCtrl',
 
     function ($scope, PetFactory) {
       $scope.petCollection = [];
-      $scope.petOfTheDay = null;
-
 
       // console.log(PetFactory);
 

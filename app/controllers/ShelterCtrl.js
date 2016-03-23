@@ -1,4 +1,5 @@
-"use strict";
+"use strict"; 
+// this controller is getting the shelters from ShelterFactory and changing the URL path
 
 App.controller('ShelterCtrl', 
   [
@@ -29,31 +30,3 @@ App.controller('ShelterCtrl',
       } // closing $scope.searchShelters function
     }
 ]);
-
-
-
-
-
-
-      // ).then(
-      //   function (shelter) {
-      //     $scope.shelterCollection.push(shelter);
-      //     return ShelterFactory();
-      //   },
-      //   function () {}
-      // ).then(
-      //   function (shelter) {
-      //     $scope.shelterCollection.push(shelter);          
-      //     return ShelterFactory();
-      //   },
-      //   function () {}
-      // ).then(
-      //   function (shelter) {
-      //     $scope.shelterCollection.push(shelter);          
-      //   },
-      //   function () {}
-      // );
-//     }
-
-// ]);
-

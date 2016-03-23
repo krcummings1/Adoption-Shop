@@ -1,30 +1,35 @@
-<input type="text" placeholder="Enter Breed" ng-model="findPet">
+<div ng-controller="PetCtrl">  
+  <!-- Breed input -->
+  <input type="text" placeholder="Enter Breed" ng-model="pet.breed">
 
-<!-- Age button -->
-<div class="btn-group">
-  <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Age <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Puppy</a></li>
-    <li><a href="#">Youngin</a></li>
-    <li><a href="#">Adult</a></li>
-    <li><a href="#">Senior</a></li>
-    <!-- <li role="separator" class="divider"></li> -->
-  </ul>
+  <!-- Age dropdown -->
+  <div class="btn-group">
+    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Age <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" name="age" ng-model="pet.age" id="age">
+      <li value="puppy"><a href="#">Puppy</a></li>
+      <li value="young"><a href="#">Young</a></li>
+      <li value="adult"><a href="#">Adult</a></li>
+      <li value="senior"><a href="#">Senior</a></li>
+    </ul>
+  </div>
+
+  <!-- Gender dropdown -->
+  <div class="btn-group">
+    <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Gender <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" name="sex" ng-model="pet.sex" id="sex">
+      <li value="M"><a href="#">Male</a></li>
+      <li value="F"><a href="#">Female</a></li>
+    </ul>
+  </div>
+
+  <!-- Zip input -->
+  <input type="text" placeholder="Enter Zip Code" ng-model="pet.zip">
+
+  <!-- Search button -->
+  <button ng-click="searchPets()">Search Pets</button>
+
 </div>
-
-<!-- Gender button -->
-<div class="btn-group">
-  <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Gender <span class="caret"></span>
-  </button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Male</a></li>
-    <li><a href="#">Female</a></li>
-    <!-- <li role="separator" class="divider"></li> -->
-  </ul>
-</div>
-
-<input type="text" placeholder="Enter Zip Code" ng-model="findZip">
-<button ng-click="find()">Search Pets</button>

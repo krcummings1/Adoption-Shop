@@ -11,29 +11,3 @@ App.controller('ShelterResultsCtrl',
 ]);
 
 
-
-
-
-
-      // ).then(
-      //   function (shelter) {
-      //     $scope.shelterCollection.push(shelter);
-      //     return ShelterFactory();
-      //   },
-      //   function () {}
-      // ).then(
-      //   function (shelter) {
-      //     $scope.shelterCollection.push(shelter);          
-      //     return ShelterFactory();
-      //   },
-      //   function () {}
-      // ).then(
-      //   function (shelter) {
-      //     $scope.shelterCollection.push(shelter);          
-      //   },
-      //   function () {}
-      // );
-//     }
-
-// ]);
-

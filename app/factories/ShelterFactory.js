@@ -7,7 +7,7 @@ App.factory("ShelterFactory", function ($q, $http) {
   return {
     getShelters: function () {
       return foundShelters;
-    },
+    }, // findShelters is like a setter
     findShelters: function (zip) {
       return $q((resolve, reject) => {
         $http
