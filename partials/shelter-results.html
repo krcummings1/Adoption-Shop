@@ -1,3 +1,11 @@
-<div ng-repeat="shelter in shelterArray">
-  {{ shelter.name.$t }}
+<div class="display-container">
+  <div ng-repeat="shelter in shelterArray" class="shelter-list">
+    <h4>{{ shelter.name.$t }}</h4>
+    <p>{{ shelter.address1.$t }}</p>
+    <p>{{ shelter.city.$t }}</p>
+    <p>{{ shelter.state.$t }}</p>
+    <p>{{ shelter.zip.$t }}</p>
+    <p>{{ shelter.phone.$t }}</p>
+    <p>{{ shelter.email.$t }}</p>
+  </div>
 </div>

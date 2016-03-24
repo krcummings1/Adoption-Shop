@@ -6,7 +6,7 @@ App.controller('ShelterResultsCtrl',
     "ShelterFactory",
 
     function ($scope, ShelterFactory) {
-      $scope.shelterArray = ShelterFactory.getShelters()
+      $scope.shelterArray = ShelterFactory.getShelters();
     }
 ]);
 

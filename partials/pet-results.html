@@ -1,7 +1,10 @@
-<!-- <div ng-controller="PetResultsCtrl" class="pet-list"> -->
-  hello
-  <div ng-repeat="pet in petArray">
-    <h1>{{ pet.name.$t }}</h1>
-    <!-- <img src="{{ pet.media.photos.photo[0].$t }}"> -->
-  </div>
-<!-- </div> -->
+<div class="display-container row">
+
+  <div ng-repeat="pet in petArray" class="pet-list col-sm-6 col-md-3">
+    <h3>{{ pet.name.$t }}</h3>
+    <img src="{{ pet.media.photos.photo[0].$t }}">
+    <!-- <p>description</p> -->
+    <p><a href="#" class="btn" role="button" ng-click="favoritePet(pet)"> &#9733; Favorite</a></p>
+  </div> <!-- closing ng-repeat -->
+
+</div>

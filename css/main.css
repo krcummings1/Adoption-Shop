@@ -4,3 +4,32 @@
   display: block;
   margin: 0 auto;
   padding: 10px 0px; }
+
+.pet-list {
+  display: inline block;
+  border: 5px solid black;
+  text-align: center;
+  padding: 5px; }
+
+.random-pet-list {
+  display: inline block;
+  border: 5px solid black;
+  text-align: center;
+  padding: 0px;
+  float: left; }
+
+.random-pet-list h3 {
+  padding-bottom: 5px;
+  margin: 0px; }
+
+.display-container {
+  overflow: auto;
+  border: outset 2px red; }
+
+.shelter-list {
+  display: inline block;
+  border: 5px solid black;
+  text-align: center; }
+
+.shelter-list p {
+  padding: 1px 5px; }

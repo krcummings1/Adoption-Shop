@@ -27,7 +27,7 @@
   </div>
 
   <!-- Zip input -->
-  <input type="text" placeholder="Enter Zip Code" ng-model="pet.zip">
+  <input type="text" placeholder="Enter Zip Code" ng-model="pet.zip" ng-keydown="$event.which === 13 && searchPets()">
 
   <!-- Search button -->
   <button ng-click="searchPets()">Search Pets</button>

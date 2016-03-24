@@ -1,3 +1,5 @@
+// displays random pet pics in DOM on load
+
 "use strict";
 
 App.controller('PetDisplayCtrl', 
