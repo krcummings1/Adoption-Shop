@@ -6,7 +6,9 @@ App.factory("PetSearchFactory", function ($q, $http) {
   let foundPets = [];
 
   return {
-    getPets: function () {  
+    getPets: function () { 
+    // getPets is being called in PetResultsCtrl 
+      console.log("foundPets", foundPets);
       return foundPets;
     },
     findPets: function (breed, zip) {
