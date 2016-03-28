@@ -19,36 +19,22 @@ App.controller('PetResultsCtrl',
             return pet.breeds.breed.$t;
         } else {
           console.log("I'm an array!");
-          return pet.breeds.breed.map(b => b.$t).join(",");
-        // let x = pet.breeds.breed.map(b => b.$t);
-        // console.log(x);
-            // return pet.breeds.breed.map((b) => b.$t).join(",");
-            // console.log(">1 breed", pet.breeds.breed.map((b) => b.$t).join(","));
+          return pet.breeds.breed.map(b => b.$t).join(", ");
+          // like below... 
+          // if more than one breed, b becomes all breeds to iterate over
+          //      pet.breeds.breed.map(function (b) {
+          //       return b.$t;
+          //      }).join(","); --> joins the breeds into a string with , separating them
         }
 
-      }
+      } // closes getBreed function
 
       $scope.favoritePet = function (pet) {
         console.log("pet", pet);
 
-
-
         let favePet = {
             name: pet.name.$t,
             breed: $scope.getBreed(pet),
-            // getBreed(),
-            // pet.breeds.breed.map((b) => b.$t).join(","),
-
-            // function() {
-            //   if (pet.breeds.breed.length === 1){
-            //     return pet.breeds.breed.$t;
-            //   } else {
-            //     pet.breeds.breed.map((b) => b.$t).join(",")
-            //   }
-            // },
-            
-
-            // breed: pet.breeds.breed.map((b) => b.$t).join(",")
             age: 0,
             gender: pet.sex.$t,
             shelter: pet.shelterId.$t
@@ -75,9 +61,6 @@ App.controller('PetResultsCtrl',
       }; // closes favorite pet function
       
     } // closes controller function
-
-
-
 
 
 ]); // closing controller

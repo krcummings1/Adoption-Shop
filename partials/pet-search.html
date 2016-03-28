@@ -1,6 +1,6 @@
 <div ng-controller="PetCtrl">  
   <!-- Breed input -->
-  <input type="text" placeholder="Enter Breed" ng-model="pet.breed">
+  <input type="text" placeholder="Enter Breed" ng-model="pet.breed" ng-keydown="$event.which === 13 && searchPets()">
 
   <!-- Age dropdown -->
   <div class="btn-group">
@@ -31,5 +31,6 @@
 
   <!-- Search button -->
   <button ng-click="searchPets()">Search Pets</button>
+  <!-- searchPets() is in PetCtrl -->
 
 </div>

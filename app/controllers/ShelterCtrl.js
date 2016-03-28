@@ -6,8 +6,9 @@ App.controller('ShelterCtrl',
     "$scope",
     "$location",
     "ShelterFactory",
+    "$route",
 
-    function ($scope, $location, ShelterFactory) {
+    function ($scope, $location, ShelterFactory, $route) {
       $scope.shelterCollection = [];
       $scope.shelter = {
         zip: ""
@@ -20,6 +21,9 @@ App.controller('ShelterCtrl',
         .then(
           function () { 
             $location.path("/shelters")
+            $route.reload();
+            // passed in $route as a dependency above
+            // $route.reload(); refreshes the DOM on each search
           },
           function (err) {
             console.log(err);

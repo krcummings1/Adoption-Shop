@@ -6,8 +6,9 @@ App.controller('PetCtrl',
     "$scope",
     "$location",
     "PetSearchFactory",
+    "$route",
 
-    function ($scope, $location, PetSearchFactory) {
+    function ($scope, $location, PetSearchFactory, $route) {
       $scope.petCollection = [];
       $scope.pet = {
         breed: "",
@@ -23,6 +24,9 @@ App.controller('PetCtrl',
         .then(
           function () { 
             $location.path("/pets")
+            $route.reload();
+            // passed in $route as a dependency above
+            // $route.reload(); refreshes the DOM on each search
           },
           function (err) {
             console.log(err);
@@ -31,5 +35,5 @@ App.controller('PetCtrl',
 
 
       } // closing $scope.searchPets function
-    }
+    } //closing main function
 ]);
