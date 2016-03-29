@@ -2,10 +2,16 @@
 
   <div ng-repeat="pet in petArray" class="pet-list col-sm-6 col-md-3">
     <h3>{{ pet.name.$t }}</h3>
-    <img src="{{ pet.media.photos.photo[0].$t }}">
+    <!-- <img src="{{ pet.media.photos.photo[0].$t }}"> -->
+    <img ng-src="http://photos.petfinder.com/photos/pets/{{pet.id.$t}}/1/?bust=1458881321&width=300&-pn.jpg">
     <!-- <p>description</p> -->
     <p><class="btn" role="button" ng-click="favoritePet(pet)"> &#9733; Favorite</p>
     <!-- favoritePet() is in PetResultsCtrl -->
   </div> <!-- closing ng-repeat -->
 
 </div>
+
+
+<!-- http://api.petfinder.com/pet.find?key=8e5f1dc37136499111d4b4b2b45d51ed&animal=dog&breed=${breed}&location=${zip}&output=full&format=json&callback=JSON_CALLBACK -->
+
+<!-- http://photos.petfinder.com/photos/pets/{{pet.id}}/1/?bust=1458881321&width=300&-pn.jpg -->

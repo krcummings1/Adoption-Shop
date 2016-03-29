@@ -6,3 +6,15 @@
   margin: 0 auto;
   padding: 10px 0px;
 }
+
+// had to add li in front of .loginListItem li class name to make link align right
+li.loginListItem {
+  position: relative;
+  text-align: right;
+  float: right;
+}
+
+a.loginLink {
+  position: absolute;
+  right: 0;
+}

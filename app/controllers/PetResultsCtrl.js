@@ -32,14 +32,26 @@ App.controller('PetResultsCtrl',
       $scope.favoritePet = function (pet) {
         console.log("pet", pet);
 
+// getURL()
+        for(var i in pet){
+          if (pet.media.photos.photo[i].\@size === "pn"){
+          console.log("i in pet", pet.media.photos.photo);
+          }          
+        }
+
+        // petID = pet.id.$t;
+
         let favePet = {
             name: pet.name.$t,
             breed: $scope.getBreed(pet),
             age: 0,
             gender: pet.sex.$t,
-            shelter: pet.shelterId.$t
-          };
+            shelter: pet.shelterId.$t,
+            petID: pet.id.$t
 
+            // imgURL: 
+          };
+          // imdbID: movie.imdbID
         console.log("favePet", favePet);
 
         // POST the song to Firebase

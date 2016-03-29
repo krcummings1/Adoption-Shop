@@ -5,6 +5,15 @@
   margin: 0 auto;
   padding: 10px 0px; }
 
+li.loginListItem {
+  position: relative;
+  text-align: right;
+  float: right; }
+
+a.loginLink {
+  position: absolute;
+  right: 0; }
+
 .pet-list {
   display: inline block;
   border: 5px solid black;

@@ -9,6 +9,12 @@
       <li role="presentation" ng-class="{active: tab=='b'}"> 
         <a href="#" ng-click="tab = 'b'">Shelter Search</a>
       </li>
+      <li role="presentation" ng-class="{active: tab=='c'}"> 
+        <a href="#/favorites" ng-click="tab = 'c'">Favorites</a>
+      </li>
+      <li class="loginListItem">
+        <a href="#/login" class="loginLink" ng-click="loginView()">Login / Register</a>
+      </li>
     </ul>
   </nav>
 
@@ -20,4 +26,16 @@
   <div ng-if="tab==='b'">
     <div ng-include="'partials/shelter-search.html'"></div>
   </div>
+
+  <div ng-if="tab==='c'">
+    <div ng-include="'partials/favorite-pets.html'"></div>
+  </div>
+
 </div>
+
+
+
+
+
+
+

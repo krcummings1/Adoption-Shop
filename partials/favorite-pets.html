@@ -1,11 +1,13 @@
 <div class="display-container row">
 
-  <div ng-repeat="pet in petArray" class="pet-list col-sm-6 col-md-3">
-    <h3>{{ pet.name.$t }}</h3>
-    <img src="{{ pet.media.photos.photo[0].$t }}">
+  <div ng-repeat="pet in favoritePets" class="pet-list col-sm-6 col-md-3">
+    <h3>{{ pet.name }}</h3>
+    <span ng-if="pet.id.$t"><img ng-src="http://photos.petfinder.com/photos/pets/{{pet.id.$t}}/1/?bust=1458881321&width=300&-pn.jpg"></span>
     <!-- <p>description</p> -->
     <p><class="btn" role="button" ng-click="deletePet(pet)"> &#9733; Remove From Favorites</p>
     <!-- favoritePet() is in PetResultsCtrl -->
   </div> <!-- closing ng-repeat -->
 
 </div>
+
+<!-- movie.IMDB -->

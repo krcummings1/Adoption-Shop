@@ -10,6 +10,7 @@ App.factory("FirebaseFactory", function ($q, $http) {
             for (let key in userCollection){
               userCollection[key].id = key;
             }
+            console.log("userCollection in FirebaseFactory", userCollection);
             resolve(userCollection)
           },
           error => reject(error)
