@@ -9,7 +9,7 @@ App.factory("AuthFactory", (firebaseURL) => {
       //use authData.uid to store favorited pets under their user id
       console.log("authData", authData);
 
-      let authData = ref.getAuth();
+      var authData = ref.getAuth();
       return authData.uid;
     },
 

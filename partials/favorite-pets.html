@@ -2,7 +2,9 @@
 
   <div ng-repeat="pet in favoritePets" class="pet-list col-sm-6 col-md-3">
     <h3>{{ pet.name }}</h3>
-    <span ng-if="pet.id.$t"><img ng-src="http://photos.petfinder.com/photos/pets/{{pet.id.$t}}/1/?bust=1458881321&width=300&-pn.jpg"></span>
+    <!-- pet.imgURL because pet = single pet in favorited pets on firebase
+          imgURL is the key on the firebase object -->
+    <img ng-src="{{ pet.imgURL }}">
     <!-- <p>description</p> -->
     <p><class="btn" role="button" ng-click="deletePet(pet)"> &#9733; Remove From Favorites</p>
     <!-- favoritePet() is in PetResultsCtrl -->
@@ -10,4 +12,3 @@
 
 </div>
 
-<!-- movie.IMDB -->

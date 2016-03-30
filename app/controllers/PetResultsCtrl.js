@@ -32,14 +32,15 @@ App.controller('PetResultsCtrl',
       $scope.favoritePet = function (pet) {
         console.log("pet", pet);
 
-// getURL()
-        for(var i in pet){
-          if (pet.media.photos.photo[i].\@size === "pn"){
-          console.log("i in pet", pet.media.photos.photo);
-          }          
+        let urlString;
+        // i = URL for single photo in photo array
+        for(var i in pet.media.photos.photo){
+          // if any URL in the photo array contains pn.
+          if (pet.media.photos.photo[i].$t.indexOf("pn.") > -1){
+          // set urlString to the URL containing pn.
+          urlString = pet.media.photos.photo[i].$t;
+          }
         }
-
-        // petID = pet.id.$t;
 
         let favePet = {
             name: pet.name.$t,
@@ -47,12 +48,10 @@ App.controller('PetResultsCtrl',
             age: 0,
             gender: pet.sex.$t,
             shelter: pet.shelterId.$t,
-            petID: pet.id.$t
-
-            // imgURL: 
+            imgURL: urlString
           };
-          // imdbID: movie.imdbID
-        console.log("favePet", favePet);
+        
+          console.log("favePet", favePet);
 
         // POST the song to Firebase
           // Remember to stringify objects/arrays before
