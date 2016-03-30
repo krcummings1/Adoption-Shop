@@ -5,10 +5,12 @@ App.controller("LoginCtrl",
   "$scope",
   "$location",
   "$http",
-  "AuthFactory",
+  "authFactory",
   "firebaseURL",
 
-  ($scope, $location, $http, AuthFactory, firebaseURL) => {
+  function ($scope, $location, $http, authFactory, firebaseURL) {
+
+    console.log(authFactory.isAuthenticated);
 
     // Local variables
     let ref = new Firebase(firebaseURL);
@@ -45,7 +47,7 @@ App.controller("LoginCtrl",
       supplied credentials.
      */
     $scope.login = () => 
-      AuthFactory
+      authFactory
         .authenticate($scope.account)
         .then(() => {
           $location.path("/");

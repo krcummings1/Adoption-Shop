@@ -4,8 +4,10 @@
     <h3>{{ pet.name.$t }}</h3>
     <img ng-src="http://photos.petfinder.com/photos/pets/{{pet.id.$t}}/1/?bust=1458881321&width=300&-pn.jpg">
     <!-- <p>description</p> -->
-    <p><class="btn" role="button" ng-click="favoritePet(pet)"> &#9733; Favorite</p>
+    <div><p class="btn favoriteButton"  role="button" ng-click="favoritePet($event, pet)"> &#9733; Favorite</p></div>
     <!-- favoritePet() is in PetResultsCtrl -->
   </div> <!-- closing ng-repeat -->
 
 </div>
+
+<!-- <p><button class="btn" role="button" ng-click="favoritePet(pet)"> {{ favoriteButton }} </button></p> -->

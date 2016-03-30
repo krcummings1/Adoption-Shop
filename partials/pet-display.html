@@ -6,7 +6,7 @@
     <img ng-src="http://photos.petfinder.com/photos/pets/{{pet.id.$t}}/1/?bust=1458881321&width=300&-pn.jpg">
 
     <!-- put ng-controller="PetResultsCtrl" on the button so the click event can call favoritePet() which is in PetResultsCtrl -->
-    <p><a href="#" class="btn" role="button" ng-controller="PetResultsCtrl" ng-click="favoritePet(pet)"> &#9733; Favorite</a></p>
+    <div><p class="btn favoriteButton"  role="button" ng-controller="PetResultsCtrl" ng-click="favoritePet($event, pet)"> &#9733; Favorite</p></div>
     <!-- favoritePet() is in PetResultsCtrl -->
   </div>
   

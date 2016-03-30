@@ -1,18 +1,10 @@
 "use strict";
 
-App.factory("AuthFactory", (firebaseURL) => {
+App.factory("authFactory", function (firebaseURL) {
+  
   let ref = new Firebase(firebaseURL);
 
   return {
-
-    getUserID () {
-      //use authData.uid to store favorited pets under their user id
-      console.log("authData", authData);
-
-      var authData = ref.getAuth();
-      return authData.uid;
-    },
-
     /*
       Determine if the client is authenticated
      */
@@ -45,3 +37,22 @@ App.factory("AuthFactory", (firebaseURL) => {
     }
   };
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

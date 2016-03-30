@@ -7,8 +7,9 @@ App.controller("FavoritePetsListCtrl",
   "$http",
   "$location",
   "FirebaseFactory",
+  "$route",
 
-  function ($scope, $routeParams, $http, $location, FirebaseFactory) {
+  function ($scope, $routeParams, $http, $location, FirebaseFactory, $route) {
 
     // Default properties for bound variables
     $scope.favoritePets = [];
@@ -32,19 +33,50 @@ App.controller("FavoritePetsListCtrl",
 
 
         $scope.selectedPet = $scope.favoritePets.filter(pet => pet.id === $routeParams.petId)[0];
+
       }, // closes userCollection function
 
       // Handle reject() from the promise
       err => console.log(err)
-    ); // closes .then(
+    ); // closes FirebaseFactory().then(
 
     /*
-      This function is bound to an ng-click directive
-      on the button in the view
+      This function is bound to an ng-click directive deletePet(pet)
+      on the button in the favorite-pets partial 
     */
-    // $scope.deleteSong = () => $http
+
+    $scope.deletePet = function (pet) {
+
+
+
+  //remove pet from favoritePets
+      let petIndex = $scope.favoritePets.indexOf(pet);
+      if (petIndex >= 0) {
+        $scope.favoritePets.splice(petIndex, 1);
+      }
+
+
+
+
+
+      $http.delete(`https://capstone-kaylee.firebaseio.com/pets/${pet.id}.json`)
+        .then(() => 
+          $location.path("/favorites"));
+    } // closes deletePet function
+
+    // $scope.deletePet = () => $http
     //     .delete(`https://nss-demo-instructor.firebaseio.com/pets/${$routeParams.songId}.json`)
     //     .then(() => $location.url("/"));
 
   } // closing main function
 ]);
+
+
+
+
+
+
+
+
+
+

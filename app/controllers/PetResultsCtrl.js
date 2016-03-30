@@ -29,8 +29,11 @@ App.controller('PetResultsCtrl',
 
       } // closes getBreed function
 
-      $scope.favoritePet = function (pet) {
-        console.log("pet", pet);
+      // $scope.favoriteButton = "&#9733; Favorite";
+
+      $scope.favoritePet = function (event, pet) {
+
+        event.currentTarget.innerHTML = "Added to Favorites";
 
         let urlString;
         // i = URL for single photo in photo array
@@ -40,7 +43,7 @@ App.controller('PetResultsCtrl',
           // set urlString to the URL containing pn.
           urlString = pet.media.photos.photo[i].$t;
           }
-        }
+        } // closes for loop
 
         let favePet = {
             name: pet.name.$t,
@@ -49,6 +52,7 @@ App.controller('PetResultsCtrl',
             gender: pet.sex.$t,
             shelter: pet.shelterId.$t,
             imgURL: urlString
+            // uid: uid
           };
         
           console.log("favePet", favePet);
