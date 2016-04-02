@@ -42,3 +42,8 @@ a.loginLink {
 
 .shelter-list p {
   padding: 1px 5px; }
+
+.fave-shelters-container {
+  margin: 0 auto;
+  display: block;
+  border: 5px solid green; }

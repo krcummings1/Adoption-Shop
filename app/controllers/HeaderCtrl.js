@@ -1,7 +1,10 @@
 "use strict";
 
-App.controller('HeaderCtrl', ["$scope",
-  ($scope) => {
+App.controller('HeaderCtrl', 
+  [
+  "$scope",
+   
+  function ($scope) {
     $scope.tab = "a";
   }
 ]);

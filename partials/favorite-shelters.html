@@ -1,0 +1,15 @@
+<div ng-controller="FavoriteSheltersListCtrl">
+  <div class="fave-shelters-container row">
+    <h2>Shelters:</h2>
+    <div ng-repeat="shelter in favoriteShelters" class="shelter-list col-sm-6 col-md-3">
+      <h4>{{ shelter.name }}</h4>
+      <p>{{ shelter.address }}</p>
+      <p>{{ shelter.city }}, {{ shelter.state }} {{ shelter.zip }}</p>
+      <p>{{ shelter.phone }}</p>
+      <p>{{ shelter.email }}</p>
+
+      <p><class="btn" role="button" ng-click="deleteShelter(shelter)"> &#9733; Remove From Favorites</p>
+      <!-- deleteShelter() is in FavoriteSheltersListCtrl -->
+    </div> <!-- closing shelter ng-repeat -->
+  </div>
+</div>

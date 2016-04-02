@@ -14,6 +14,7 @@ App.factory("authFactory", function (firebaseURL) {
       if (authData) {
         return true;
       } else {
+        console.log("please log in");
         return false;
       }
     },

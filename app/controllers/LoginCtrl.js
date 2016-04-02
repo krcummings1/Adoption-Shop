@@ -10,7 +10,7 @@ App.controller("LoginCtrl",
 
   function ($scope, $location, $http, authFactory, firebaseURL) {
 
-    console.log(authFactory.isAuthenticated);
+    // console.log(authFactory.isAuthenticated);
 
     // Local variables
     let ref = new Firebase(firebaseURL);

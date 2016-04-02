@@ -5,10 +5,10 @@ App.controller('PetResultsCtrl',
     "$scope",
     "$http",
     "PetSearchFactory",
-    "FirebaseFactory",
+    "PetFirebaseFactory",
     "firebaseURL",
 
-    function ($scope, $http, PetSearchFactory, FirebaseFactory, firebaseURL) {
+    function ($scope, $http, PetSearchFactory, PetFirebaseFactory, firebaseURL) {
       $scope.petArray = PetSearchFactory.getPets();
 
       $scope.petList = [];
@@ -29,8 +29,6 @@ App.controller('PetResultsCtrl',
 
       } // closes getBreed function
 
-      // $scope.favoriteButton = "&#9733; Favorite";
-
       $scope.favoritePet = function (event, pet) {
 
         event.currentTarget.innerHTML = "Added to Favorites";
@@ -45,6 +43,9 @@ App.controller('PetResultsCtrl',
           }
         } // closes for loop
 
+
+        // let currentUser = getAuth();
+
         let favePet = {
             name: pet.name.$t,
             breed: $scope.getBreed(pet),
@@ -52,7 +53,7 @@ App.controller('PetResultsCtrl',
             gender: pet.sex.$t,
             shelter: pet.shelterId.$t,
             imgURL: urlString
-            // uid: uid
+            // uid: user.uid
           };
         
           console.log("favePet", favePet);

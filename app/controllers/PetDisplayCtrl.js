@@ -17,26 +17,24 @@ App.controller('PetDisplayCtrl',
           $scope.petCollection.push(randomPet);
           return PetFactory();
         },
-        function (error) {
-
-        }
+        function (error) {}
       ).then(
         function (randomPet) {
           $scope.petCollection.push(randomPet);
           return PetFactory();
         },
-        function () {}
+        function (error) {}
       ).then(
         function (randomPet) {
           $scope.petCollection.push(randomPet);          
           return PetFactory();
         },
-        function () {}
+        function (error) {}
       ).then(
         function (randomPet) {
           $scope.petCollection.push(randomPet);          
         },
-        function () {}
+        function (error) {}
       );
     }
 

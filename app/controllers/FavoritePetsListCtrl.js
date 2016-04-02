@@ -6,17 +6,17 @@ App.controller("FavoritePetsListCtrl",
   "$routeParams",
   "$http",
   "$location",
-  "FirebaseFactory",
+  "PetFirebaseFactory",
   "$route",
 
-  function ($scope, $routeParams, $http, $location, FirebaseFactory, $route) {
+  function ($scope, $routeParams, $http, $location, PetFirebaseFactory, $route) {
 
     // Default properties for bound variables
     $scope.favoritePets = [];
     $scope.selectedPet = {};
 
     // Invoke the promise that reads from Firebase
-    FirebaseFactory().then(
+    PetFirebaseFactory().then(
 
       // Handle resolve() from the promise
       userCollection => {
@@ -38,7 +38,7 @@ App.controller("FavoritePetsListCtrl",
 
       // Handle reject() from the promise
       err => console.log(err)
-    ); // closes FirebaseFactory().then(
+    ); // closes PetFirebaseFactory().then(
 
     /*
       This function is bound to an ng-click directive deletePet(pet)
@@ -47,17 +47,11 @@ App.controller("FavoritePetsListCtrl",
 
     $scope.deletePet = function (pet) {
 
-
-
   //remove pet from favoritePets
       let petIndex = $scope.favoritePets.indexOf(pet);
       if (petIndex >= 0) {
         $scope.favoritePets.splice(petIndex, 1);
       }
-
-
-
-
 
       $http.delete(`https://capstone-kaylee.firebaseio.com/pets/${pet.id}.json`)
         .then(() => 

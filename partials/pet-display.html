@@ -2,8 +2,11 @@
 <div class="display-container row">
 
   <div ng-repeat="pet in petCollection" class="random-pet-list col-xs-6 col-md-3">
-    <h3>{{ pet.name.$t }}</h3>
     <img ng-src="http://photos.petfinder.com/photos/pets/{{pet.id.$t}}/1/?bust=1458881321&width=300&-pn.jpg">
+    <h3>{{ pet.name.$t }}</h3>
+    <p>{{ pet.breeds.breed.$t }}</p>
+    <p>Gender: {{ pet.sex.$t }}</p>
+    <p>Shelter ID: {{ pet.shelterId.$t }}</p>
 
     <!-- put ng-controller="PetResultsCtrl" on the button so the click event can call favoritePet() which is in PetResultsCtrl -->
     <div><p class="btn favoriteButton"  role="button" ng-controller="PetResultsCtrl" ng-click="favoritePet($event, pet)"> &#9733; Favorite</p></div>

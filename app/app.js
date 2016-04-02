@@ -34,7 +34,7 @@ App.config(["$routeProvider",
       when("/favorites", {
         templateUrl: "partials/favorite-pets.html",
         controller: "FavoritePetsListCtrl",
-        // resolve: { isAuth }
+        resolve: { isAuth }
       }).
       when("/login", {
         templateUrl: "partials/login.html",
