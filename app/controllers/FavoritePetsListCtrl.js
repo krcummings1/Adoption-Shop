@@ -25,6 +25,9 @@ App.controller("FavoritePetsListCtrl",
         //   userCollection[key].id = key;
         //   $scope.favoritePets.push(userCollection[key]);
         // });
+
+////////////here
+
         for (let key in userCollection) {
           $scope.favoritePets.push(userCollection[key]);
         }

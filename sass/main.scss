@@ -1,14 +1,5 @@
 @import 'header';
-// @import 'display-page';
-
-.pet-list {
-  display: inline block;
-  border: 5px solid black;
-  text-align: center;
-  padding: 5px;
-  // float: left;
-
-}
+@import 'favorites';
 
 .random-pet-list {
   display: inline block;
@@ -24,12 +15,14 @@
   margin: 0px;
 }
 
-.display-container {
-  overflow: auto;
-  // margin-left: 100px;
-  border: outset 2px red;
-
-}
+// .display-container {
+//   overflow: auto;
+//   // margin-left: 100px;
+//   border: 2px solid red;
+//   margin: 0 auto;
+//   max-width: 95%;
+//   padding: 15px 0px;
+// }
 
 .shelter-list {
   display: inline block;
@@ -47,6 +40,8 @@
   display: block;
   border: 5px solid green;
 }
+
+
 
 
 
