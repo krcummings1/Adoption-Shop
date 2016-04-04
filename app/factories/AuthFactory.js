@@ -5,6 +5,15 @@ App.factory("authFactory", function (firebaseURL) {
   let ref = new Firebase(firebaseURL);
 
   return {
+
+    getUserID () {
+      //use authData.uid to store users movies under their user id
+      console.log("authData", authData);
+
+      let authData = ref.getAuth();
+      return authData.uid;
+    },
+    
     /*
       Determine if the client is authenticated
      */
@@ -12,9 +21,9 @@ App.factory("authFactory", function (firebaseURL) {
       let authData = ref.getAuth();
 
       if (authData) {
+        // console.log(authData);
         return true;
       } else {
-        console.log("please log in");
         return false;
       }
     },

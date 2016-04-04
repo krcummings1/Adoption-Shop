@@ -50,7 +50,8 @@ App.controller("LoginCtrl",
       authFactory
         .authenticate($scope.account)
         .then(() => {
-          $location.path("/");
+          authFactory.isAuthenticated();
+          $location.path("/favorites");
           $scope.$apply();  // Needed for $location.path() to succeed
         });
 

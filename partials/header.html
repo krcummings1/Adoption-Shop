@@ -14,15 +14,10 @@
       </li>
       <li role="presentation" ng-class="{active: tab=='d'}" class="loginListItem">
           <a href="#/login" class="loginLink" ng-click="tab = 'd'">
-            <span ng-if="!authFactory.isAuthenticated()">Login / Register</span>
-            <span ng-if="authFactory.isAuthenticated()">Logout</span>
-
+            <span ng-if="!isAuthenticated()">Login / Register</span>
+            <span ng-if="isAuthenticated()" ng-click="logout()">Logout</span>
           </a>
-
-
-
       </li>
-
     </ul>
   </nav>
 

@@ -1,20 +1,21 @@
-<div class="display-container fave-shelters-container row">
-  <h2>Dogs:</h2>
-  <div ng-repeat="pet in favoritePets" class="pet-list col-sm-6 col-md-3">
-    <img ng-src="{{ pet.imgURL }}">
-    <h3>{{ pet.name }}</h3>
-    <p>Breed: {{ pet.breed }}</p>
-    <p>Gender: {{ pet.gender }}</p>
-    <p>Shelter ID: {{ pet.shelter }}</p>
-    <!-- pet.imgURL because pet = single pet in favorited pets on firebase
-          imgURL is the key on the firebase object -->
-    <!-- <p>description</p> -->
-    <p><class="btn" role="button" ng-click="deletePet(pet)"> &#9733; Remove From Favorites</p>
-    <!-- deletePet() is in FavoritePetsListCtrl -->
-  </div> <!-- closing pet ng-repeat -->  
+<section class="display-container">
+  <div class="fave-pets-container row">
+    <h2>Dogs:</h2>
+    <div ng-repeat="pet in favoritePets" class="pet-list col-sm-6 col-md-3">
+      <img ng-src="{{ pet.imgURL }}">
+      <h3>{{ pet.name }}</h3>
+      <p>Breed: {{ pet.breed }}</p>
+      <p>Gender: {{ pet.gender }}</p>
+      <p>Shelter ID: {{ pet.shelter }}</p>
+      <!-- pet.imgURL because pet = single pet in favorited pets on firebase
+            imgURL is the key on the firebase object -->
+      <!-- <p>description</p> -->
+      <p><class="btn" role="button" ng-click="deletePet(pet)"> &#9733; Remove From Favorites</p>
+      <!-- deletePet() is in FavoritePetsListCtrl -->
+    </div> <!-- closing pet ng-repeat -->  
 
-  <div>
-    <div controller="FavoriteSheltersListCtrl" ng-include="'partials/favorite-shelters.html'"></div>
   </div>
-</div>
 
+  <div controller="FavoriteSheltersListCtrl" ng-include="'partials/favorite-shelters.html'"></div>
+
+</section>

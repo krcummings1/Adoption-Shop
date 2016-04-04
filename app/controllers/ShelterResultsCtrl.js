@@ -17,6 +17,8 @@ App.controller('ShelterResultsCtrl',
 
         event.currentTarget.innerHTML = "Added to Favorites";
 
+        $( "div button:contains('Added to Favorites')").prop( "disabled", true );
+
         let faveShelter = {
             name: shelter.name.$t,
             address: shelter.address1.$t,

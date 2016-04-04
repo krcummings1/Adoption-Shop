@@ -5,6 +5,6 @@
     <p>{{ shelter.city.$t }}, {{ shelter.state.$t }} {{ shelter.zip.$t }}</p>
     <p>{{ shelter.phone.$t }}</p>
     <p>{{ shelter.email.$t }}</p>
-    <div><p class="btn favoriteButton" role="button" ng-click="favoriteShelter($event, shelter)"> &#9733; Favorite</p></div>
+    <div><button class="btn favoriteButton" role="button" ng-disabled="isDisabled" ng-click="favoriteShelter($event, shelter)"> &#9733; Favorite</button></div>
   </div>
 </div>

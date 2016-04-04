@@ -40,11 +40,13 @@ App.controller("FavoritePetsListCtrl",
       err => console.log(err)
     ); // closes PetFirebaseFactory().then(
 
+
+
+
     /*
       This function is bound to an ng-click directive deletePet(pet)
       on the button in the favorite-pets partial 
     */
-
     $scope.deletePet = function (pet) {
 
   //remove pet from favoritePets

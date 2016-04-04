@@ -11,6 +11,7 @@ let isAuth = (authFactory) => new Promise((resolve, reject) => {
     console.log("User is authenticated, resolve route promise");
     resolve();
   } else {
+    alert("Please log in.")
     console.log("User is not authenticated, reject route promise");
     reject();
   }
@@ -40,10 +41,11 @@ App.config(["$routeProvider",
         templateUrl: "partials/login.html",
         controller: "LoginCtrl"
       }).
-      // when("/logout", {
-      //   templateUrl: "partials/login.html",
-      //   controller: "LoginCtrl"
-      // }).
+      when("/logout", {
+        templateUrl: "partials/login.html",
+        controller: "LoginCtrl"
+        // resolve: { isAuth }
+      }).
       // when("/songs/:songId", {
       //   templateUrl: "partials/song-brief.html",
       //   controller: "SongDetailCtrl",

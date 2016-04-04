@@ -7,10 +7,10 @@ App.controller('PetResultsCtrl',
     "PetSearchFactory",
     "PetFirebaseFactory",
     "firebaseURL",
+    "authFactory",
 
-    function ($scope, $http, PetSearchFactory, PetFirebaseFactory, firebaseURL) {
+    function ($scope, $http, PetSearchFactory, PetFirebaseFactory, firebaseURL, authFactory) {
       $scope.petArray = PetSearchFactory.getPets();
-
       $scope.petList = [];
 
       $scope.getBreed = function (pet) {
@@ -30,8 +30,11 @@ App.controller('PetResultsCtrl',
       } // closes getBreed function
 
       $scope.favoritePet = function (event, pet) {
+        console.log("pet favorited");
 
         event.currentTarget.innerHTML = "Added to Favorites";
+
+        $( "div button:contains('Added to Favorites')").prop( "disabled", true );
 
         let urlString;
         // i = URL for single photo in photo array
@@ -44,8 +47,6 @@ App.controller('PetResultsCtrl',
         } // closes for loop
 
 
-        // let currentUser = getAuth();
-
         let favePet = {
             name: pet.name.$t,
             breed: $scope.getBreed(pet),
@@ -53,7 +54,6 @@ App.controller('PetResultsCtrl',
             gender: pet.sex.$t,
             shelter: pet.shelterId.$t,
             imgURL: urlString
-            // uid: user.uid
           };
         
           console.log("favePet", favePet);
@@ -69,7 +69,7 @@ App.controller('PetResultsCtrl',
           () => console.log("Added pet to firebase"),// Handle resolve
           (response) => console.log(response)  // Handle reject
         );
-        //find the index of the OMDB movie in the movielist that we want to add
+        //find the index of the pet in the petlist that we want to add
         //overwrite that index to be the newMovie object (firebase format) with watched and tracked keys
         let index = $scope.petList.indexOf(pet);
         $scope.petList[index] = favePet;
