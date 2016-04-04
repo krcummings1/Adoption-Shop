@@ -1,11 +1,17 @@
 <div class="display-container row">
 
-  <div ng-repeat="pet in petArray" class="pet-list col-sm-6 col-md-3">
-    <h3>{{ pet.name.$t }}</h3>
-    <img ng-src="http://photos.petfinder.com/photos/pets/{{pet.id.$t}}/1/?bust=1458881321&width=300&-pn.jpg">
-    <!-- <p>description</p> -->
-    <div><button class="btn favoriteButton"  role="button" ng-click="favoritePet($event, pet)"> &#9733; Favorite</button></div>
-    <!-- favoritePet() is in PetResultsCtrl -->
+  <div ng-repeat="pet in petArray" class="pet-list-shell col-sm-6 col-md-3">
+
+    <div class="pet-list">
+
+      <h3>{{ pet.name.$t }}</h3>
+      <img ng-src="http://photos.petfinder.com/photos/pets/{{pet.id.$t}}/1/?bust=1458881321&width=300&-pn.jpg" class="pet-pic">
+      <!-- <p>description</p> -->
+      <div><button class="btn favoriteButton"  role="button" ng-click="favoritePet($event, pet)"> &#9733; Favorite</button></div>
+      <!-- favoritePet() is in PetResultsCtrl -->
+
+    </div>
+
   </div> <!-- closing ng-repeat -->
 
 </div>

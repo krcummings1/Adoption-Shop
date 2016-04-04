@@ -2,44 +2,21 @@
 @import 'favorites';
 
 .random-pet-list {
-  display: inline block;
-  border: 5px solid black;
-  text-align: center;
-  padding: 0px;
-  // margin: 2px;
-  float: left;
-}
-
-.random-pet-list h3 {
-  padding-bottom: 5px;
-  margin: 0px;
-}
-
-// .display-container {
-//   overflow: auto;
-//   // margin-left: 100px;
-//   border: 2px solid red;
-//   margin: 0 auto;
-//   max-width: 95%;
-//   padding: 15px 0px;
-// }
-
-.shelter-list {
-  display: inline block;
-  border: 5px solid black;
-  text-align: center;
+  @extend .pet-list;
+  // display: inline block;
+  // border: 5px solid black;
+  // text-align: center;
+  // padding: 0px;
+  // // margin: 2px;
   // float: left;
+
+  h3 {
+    padding-bottom: 5px;
+    margin: 0px;
+  }
+  
 }
 
-.shelter-list p {
-  padding: 1px 5px;
-}
-
-.fave-shelters-container {
-  margin: 0 auto;
-  display: block;
-  border: 5px solid green;
-}
 
 
 

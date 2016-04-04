@@ -1,10 +1,16 @@
 <div class="display-container row">
-  <div ng-repeat="shelter in shelterArray" class="shelter-list col-sm-6 col-md-3">
-    <h4>{{ shelter.name.$t }}</h4>
-    <p>{{ shelter.address1.$t }}</p>
-    <p>{{ shelter.city.$t }}, {{ shelter.state.$t }} {{ shelter.zip.$t }}</p>
-    <p>{{ shelter.phone.$t }}</p>
-    <p>{{ shelter.email.$t }}</p>
-    <div><button class="btn favoriteButton" role="button" ng-disabled="isDisabled" ng-click="favoriteShelter($event, shelter)"> &#9733; Favorite</button></div>
+  <div ng-repeat="shelter in shelterArray" class="shelter-list-shell col-sm-6 col-md-3">
+
+    <div class="shelter-list">
+
+      <h4>{{ shelter.name.$t }}</h4>
+      <p>{{ shelter.address1.$t }}</p>
+      <p>{{ shelter.city.$t }}, {{ shelter.state.$t }} {{ shelter.zip.$t }}</p>
+      <p>{{ shelter.phone.$t }}</p>
+      <p>{{ shelter.email.$t }}</p>
+      <div><button class="btn favoriteButton" role="button" ng-disabled="isDisabled" ng-click="favoriteShelter($event, shelter)"> &#9733; Favorite</button></div>
+
+    </div>
+
   </div>
 </div>

@@ -1,17 +1,21 @@
 <!-- controlled by PetDisplayCtrl -->
 <div class="display-container row">
 
-  <div ng-repeat="pet in petCollection" class="random-pet-list col-xs-6 col-md-3">
-    <img ng-src="http://photos.petfinder.com/photos/pets/{{pet.id.$t}}/1/?bust=1458881321&width=300&-pn.jpg">
-    <h3>{{ pet.name.$t }}</h3>
-    <p>{{ pet.breeds.breed.$t }}</p>
-    <p>Gender: {{ pet.sex.$t }}</p>
-    <p>Shelter ID: {{ pet.shelterId.$t }}</p>
+  <div ng-repeat="pet in petCollection" class="random-pet-list-shell col-xs-6 col-md-3">
 
-    <!-- put ng-controller="PetResultsCtrl" on the button so the click event can call favoritePet() which is in PetResultsCtrl -->
-    <div><button class="btn favoriteButton"  role="button" ng-controller="PetResultsCtrl" ng-disabled="isDisabled" ng-click="favoritePet($event, pet)"> &#9733; Favorite</button></div>
-    <!-- favoritePet() is in PetResultsCtrl -->
+    <div class="random-pet-list">
+
+        <img ng-src="http://photos.petfinder.com/photos/pets/{{pet.id.$t}}/1/?bust=1458881321&width=300&-pn.jpg" class="pet-pic">
+        <h3>{{ pet.name.$t }}</h3>
+        <p>{{ pet.breeds.breed.$t }}</p>
+        <p>Gender: {{ pet.sex.$t }}</p>
+        <p>Shelter ID: {{ pet.shelterId.$t }}</p>
+
+        <!-- put ng-controller="PetResultsCtrl" on the button so the click event can call favoritePet() which is in PetResultsCtrl -->
+        <div><button class="btn favoriteButton"  role="button" ng-controller="PetResultsCtrl" ng-disabled="isDisabled" ng-click="favoritePet($event, pet)"> &#9733; Favorite</button></div>
+        <!-- favoritePet() is in PetResultsCtrl -->
+
+    </div>
   </div>
-  
 </div>
 
