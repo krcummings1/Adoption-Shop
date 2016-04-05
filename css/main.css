@@ -16,7 +16,6 @@ a.loginLink {
 
 .display-container {
   overflow: auto;
-  border: 2px solid red;
   margin: 0 auto;
   max-width: 95%;
   padding: 15px 0px; }
@@ -30,7 +29,7 @@ a.loginLink {
   box-sizing: border-box;
   width: 100%;
   height: 515px;
-  overflow: scroll; }
+  overflow: auto; }
 
 .pet-pic {
   padding: 2px 3px;
@@ -46,7 +45,7 @@ a.loginLink {
   padding: 2px; }
 
 .fave-shelters-container h2 {
-  border-top: 2px solid black;
+  border-top: 2px dashed black;
   padding-top: 10px; }
 
 .shelter-list {
@@ -57,3 +56,7 @@ a.loginLink {
 .random-pet-list h3 {
   padding-bottom: 5px;
   margin: 0px; }
+
+.login-area {
+  padding-left: 20px;
+  padding-bottom: 200px; }

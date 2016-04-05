@@ -12,7 +12,7 @@
         <p>Shelter ID: {{ pet.shelterId.$t }}</p>
 
         <!-- put ng-controller="PetResultsCtrl" on the button so the click event can call favoritePet() which is in PetResultsCtrl -->
-        <div><button class="btn favoriteButton"  role="button" ng-controller="PetResultsCtrl" ng-disabled="isDisabled" ng-click="favoritePet($event, pet)"> &#9733; Favorite</button></div>
+        <div><button class="btn favoriteButton"  role="button" ng-controller="PetResultsCtrl" ng-click="favoritePet($event, pet)"> &#9733; Favorite</button></div>
         <!-- favoritePet() is in PetResultsCtrl -->
 
     </div>
