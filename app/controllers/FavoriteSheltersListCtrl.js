@@ -21,16 +21,9 @@ App.controller("FavoriteSheltersListCtrl",
       // Handle resolve() from the promise
       userCollection => {
 
-        // Object.keys(userCollection).forEach(key => {
-        //   userCollection[key].id = key;
-        //   $scope.favoriteShelters.push(userCollection[key]);
-        // });
         for (let key in userCollection) {
           $scope.favoriteShelters.push(userCollection[key]);
         }
-        console.log("userCollection in FavoriteSheltersListCtrl", userCollection);
-        console.log("favoriteShelters result", $scope.favoriteShelters);
-
 
         $scope.selectedShelter = $scope.favoriteShelters.filter(shelter => shelter.id === $routeParams.shelterId)[0];
 
@@ -47,17 +40,11 @@ App.controller("FavoriteSheltersListCtrl",
 
     $scope.deleteShelter = function (shelter) {
 
-
-
   //remove shelter from favoriteShelters
       let shelterIndex = $scope.favoriteShelters.indexOf(shelter);
       if (shelterIndex >= 0) {
         $scope.favoriteShelters.splice(shelterIndex, 1);
       }
-
-
-
-
 
       $http.delete(`https://capstone-kaylee.firebaseio.com/shelters/${shelter.id}.json`)
         .then(() => 

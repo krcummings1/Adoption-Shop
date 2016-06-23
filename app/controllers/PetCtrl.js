@@ -17,8 +17,6 @@ App.controller('PetCtrl',
         zip: ""
       }
 
-       
-      
       $scope.searchPets = function () {
         PetSearchFactory.findPets($scope.pet.breed, $scope.pet.zip)
         .then(

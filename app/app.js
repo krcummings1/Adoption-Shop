@@ -44,41 +44,10 @@ App.config(["$routeProvider",
       when("/logout", {
         templateUrl: "partials/login.html",
         controller: "LoginCtrl"
-        // resolve: { isAuth }
       }).
-      // when("/songs/:songId", {
-      //   templateUrl: "partials/song-brief.html",
-      //   controller: "SongDetailCtrl",
-      //   resolve: { isAuth }
-      // }). 
       otherwise({
         redirectTo: "/"
       });
   }]);
-
-// /*
-//   When the application first loads, redirect the user to the login
-//   form if there is no authentication
-//  */
-// // app.run([
-// //   "$location",
-
-// //   ($location) => {
-// //     let appRef = new Firebase("https://capstone-kaylee.firebaseio.com/");
-
-// //     appRef.onAuth(authData => {
-// //       if (!authData) {
-// //         $location.path("/login");
-// //       }
-// //     });
-// //   }
-// // ]);
-
-
-
-
-
-
-
 
 

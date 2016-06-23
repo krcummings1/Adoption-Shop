@@ -12,12 +12,9 @@ App.controller('HeaderCtrl',
 
     $scope.tab = "a";
 
-// can name this $scope.whatever because it's just connecting the header.html partial (VIEW) to the authFactory so that the view can use it
-// MUST connect view to factory with controller in order to use it
     $scope.isAuthenticated = () => {
-  // same as $scope.isAuthenticated = function () {
 
-    // have to return authFactory.isAuthenticated (from authFactory) in order to use it
+      // have to return authFactory.isAuthenticated (from authFactory) in order to use it
       return authFactory.isAuthenticated();
       // returns TRUE or FALSE
     }
