@@ -7,7 +7,7 @@ For this app, I used AngularJS, jQuery, Bootstrap, Sass, CSS, and the PetFinder 
 
 Instructions for install:
 
-cd into lib
-run npm install
-run bower install
+cd into lib,
+run npm install,
+run bower install,
 run gulp
