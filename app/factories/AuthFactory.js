@@ -7,8 +7,6 @@ App.factory("authFactory", function (firebaseURL) {
   return {
 
     getUserID () {
-      //use authData.uid to store users movies under their user id
-      console.log("authData", authData);
 
       let authData = ref.getAuth();
       return authData.uid;
@@ -21,10 +19,13 @@ App.factory("authFactory", function (firebaseURL) {
       let authData = ref.getAuth();
 
       if (authData) {
-        // console.log(authData);
+
         return true;
+
       } else {
+
         return false;
+        
       }
     },
     /*

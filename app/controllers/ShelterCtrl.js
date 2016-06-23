@@ -14,8 +14,6 @@ App.controller('ShelterCtrl',
         zip: ""
       }
 
-       
-      
       $scope.searchShelters = function () {
         ShelterFactory.findShelters($scope.shelter.zip)
         .then(

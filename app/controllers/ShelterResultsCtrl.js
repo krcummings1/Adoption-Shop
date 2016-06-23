@@ -28,10 +28,7 @@ App.controller('ShelterResultsCtrl',
             phone: shelter.phone.$t,
             email: shelter.email.$t,
             shelterID: shelter.id.$t
-            // uid: ""
           };
-        
-          console.log("faveShelter", faveShelter);
 
         // POST the shelter to Firebase
           // Remember to stringify objects/arrays before
@@ -44,8 +41,8 @@ App.controller('ShelterResultsCtrl',
           () => console.log("Added shelter to firebase"),// Handle resolve
           (response) => console.log(response)  // Handle reject
         );
-        //find the index of the OMDB movie in the movielist that we want to add
-        //overwrite that index to be the newMovie object (firebase format) with watched and tracked keys
+        //find the index of the shelter in the shelterlist that we want to add
+        //overwrite that index to be the faveShelter object (firebase format) with watched and tracked keys
         let index = $scope.shelterList.indexOf(shelter);
         $scope.shelterList[index] = faveShelter;
 

@@ -1,4 +1,3 @@
-<!-- <input type="text" placeholder="Enter Shelter Name" ng-model="findShelter"> -->
 <div ng-controller="ShelterCtrl">
   <input type="text" placeholder="Enter Zip Code" ng-model="shelter.zip" ng-keydown="$event.which === 13 && searchShelters()">
   <button ng-click="searchShelters()">Search Shelters</button>
